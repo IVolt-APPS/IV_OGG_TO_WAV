@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <StartupObject>IV_OGG_TO_WAV.Program</StartupObject>
     <AssemblyTitle>IVolt OGG To WAV</AssemblyTitle>
     <RootNamespace>IVolt.Apps.AudioTools.OGGToWav</RootNamespace>
@@ -12,13 +12,23 @@
     <NuGetAuditMode>all</NuGetAuditMode>
     <BaseOutputPath>E:\git_InspiredVoltage\DevelopmentPlayground\OGG_TO_WAV\IV_OGG_TO_WAV_Solution\IV_OGG_TO_WAV\Releases</BaseOutputPath>
     <PublishAot>True</PublishAot>
+    <Version>1.3.0</Version>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
@@ -33,6 +43,10 @@
 
   <ItemGroup>
     <None Include="Releases\Release\net8.0\IV_OGG_TO_Wav_NET8.0.7z" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Archive\" />
   </ItemGroup>
 
 </Project>
